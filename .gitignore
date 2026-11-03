@@ -1,1 +1,4 @@
-node_modules/\ndist/\n.astro/\n.env\n
+node_modules/*
+dist/*
+.astro/*
+.env
