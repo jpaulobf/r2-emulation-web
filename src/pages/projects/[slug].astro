@@ -1,0 +1,20 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import { emulators } from '../../data/emulators';
+export function getStaticPaths() {
+  return emulators.map(emulator => ({ params: { slug: emulator.slug }, props: { emulator } }));
+}
+const { emulator } = Astro.props;
+---
+<MainLayout title={`${emulator.name} — R2 Emulation`} description={emulator.short}>
+  <section class={`project-detail shell ${emulator.accent}`}>
+    <a class="back" href="/#projects">← All projects</a>
+    <div class="kicker">R2 EMULATION / PROJECT</div>
+    <h1>{emulator.name}</h1><p class="detail-system">{emulator.system}</p><p class="detail-desc">{emulator.short}</p>
+    <div class="detail-stage">{emulator.stage}</div>
+    <div class="detail-grid">
+      <div class="info-panel"><h2>Features & direction</h2><ul>{emulator.features.map(feature => <li>{feature}</li>)}</ul><p class="panel-note">Capabilities and support vary by version; refer to the repository for current details.</p></div>
+      <div class="info-panel"><h2>Downloads & source</h2>{emulator.github ? <><p>Get releases, changelogs, source code and report issues.</p><a class="button-primary" href={`${emulator.github}/releases`} target="_blank" rel="noopener noreferrer">Official releases ↗</a><p><a class="text-link" href={emulator.github} target="_blank" rel="noopener noreferrer">Source repository ↗</a></p></> : <p>Repository and public downloads will be linked when available.</p>}</div>
+    </div>
+  </section>
+</MainLayout>

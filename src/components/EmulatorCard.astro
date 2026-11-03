@@ -1,0 +1,13 @@
+---
+const { emulator } = Astro.props;
+---
+<article class={`project-card ${emulator.accent}`}>
+  <div class="project-top"><span class="mini-label">R2 PROJECT / {emulator.glyph}</span><span class="stage">{emulator.stage}</span></div>
+  <div class="project-art" aria-hidden="true"><div class="art-halo"></div><img class="console-image" src={emulator.image} alt={`${emulator.name} classic console illustration`} loading="lazy" width="220" height="190" /></div>
+  <h3>{emulator.name}</h3><p class="system">{emulator.system}</p>
+  <p class="project-desc">{emulator.short}</p>
+  <div class="card-actions">
+    <a class="small-primary" href={`/projects/${emulator.slug}/`}>Explore project ↗</a>
+    {emulator.github && <a class="small-secondary" href={emulator.github} target="_blank" rel="noopener noreferrer">GitHub ↗</a>}
+  </div>
+</article>

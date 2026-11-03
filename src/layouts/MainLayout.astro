@@ -1,0 +1,27 @@
+---
+import '../styles/global.css';
+const { title = 'R2 Emulation', description = 'Preserving the classics. One cycle at a time.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#080c17" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell nav">
+        <a href="/" class="brand" aria-label="R2 Emulation home"><span class="brand-icon">R2</span><span>EMULATION<small>PRESERVE · PLAY · IMPROVE</small></span></a>
+        <nav aria-label="Main navigation">
+          <a href="/#projects">Projects</a><a href="/#features">Features</a><a href="/#releases">Releases</a><a href="/#engineering">Engineering</a>
+        </nav>
+        <a class="nav-github" href="https://github.com/jpaulobf" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+    </header>
+    <main><slot /></main>
+    <footer class="footer shell"><span><strong>R2 EMULATION</strong> <span class="muted">· Preserve · Play · Improve</span></span><span>Made for the love of classic games. <a href="https://github.com/jpaulobf">GitHub ↗</a></span></footer>
+  </body>
+</html>

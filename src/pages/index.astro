@@ -1,0 +1,41 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import EmulatorCard from '../components/EmulatorCard.astro';
+import { emulators } from '../data/emulators';
+---
+<MainLayout title="R2 Emulation — Preserve · Play · Improve">
+  <section class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="shell hero-content">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> R2 EMULATION PROJECT <span class="eyebrow-line"></span> OPEN SOURCE</div>
+        <h1>Preserving<br/>the classics.<br/><span>One cycle at a time.</span></h1>
+        <p>Modern emulators for timeless machines. Built with C++, precision, curiosity, and a lifelong love for classic games.</p>
+        <div class="hero-actions"><a href="#projects" class="button-primary">Explore emulators <span>↗</span></a><a href="https://github.com/jpaulobf" class="button-outline" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a></div>
+        <div class="hero-foot"><span>● C++ / SDL3</span><span>● CROSS-PLATFORM</span><span>● BUILT FOR ACCURACY</span></div>
+      </div>
+      <div class="hero-scene" role="img" aria-label="Original pixel art: three retro-inspired adventurers overlooking a sunset city"><div class="scene-caption"></div></div>
+    </div>
+  </section>
+
+  <section class="shell section" id="projects">
+    <div class="section-head"><div><div class="kicker">01 / THE COLLECTION</div><h2>Three projects. <span>One passion.</span></h2><p>From home consoles to handhelds, every machine has a story worth preserving.</p></div><span class="section-count">001 — 003</span></div>
+    <div class="project-grid">{emulators.map(emulator => <EmulatorCard emulator={emulator} />)}</div>
+  </section>
+
+  <section class="features-section" id="features"><div class="shell">
+    <div class="kicker">02 / THE PHILOSOPHY</div><h2>Built with purpose.</h2>
+    <div class="feature-grid">
+      <div class="feature"><span>◈</span><h3>Accuracy matters</h3><p>Timing and hardware behavior are central to the development process.</p></div>
+      <div class="feature"><span>✧</span><h3>Made to play</h3><p>Modern conveniences make classic experiences more approachable.</p></div>
+      <div class="feature"><span>⌘</span><h3>Cross-platform</h3><p>Native C++ foundations with Windows and Linux in mind.</p></div>
+      <div class="feature"><span>⌁</span><h3>Open development</h3><p>Follow the code, explore the design, and see the projects evolve.</p></div>
+    </div>
+  </div></section>
+
+  <section class="shell section bottom-grid">
+    <div class="info-panel" id="releases"><div class="kicker">03 / DOWNLOADS</div><h2>Latest releases</h2><p>Find current binaries, release notes, and source code directly in the official repositories.</p><div class="release-links"><a href="https://github.com/jpaulobf/R2NESV2/releases">R2NES releases <span>↗</span></a><a href="https://github.com/jpaulobf/R2BOY/releases">R2BOY releases <span>↗</span></a><a href="https://github.com/jpaulobf/R2SEGA8/releases">R2SEGA8 releases <span>↗</span></a></div><p class="panel-note">Live version numbers will be connected in a later iteration.</p></div>
+    <div class="info-panel engineering" id="engineering"><div class="kicker">04 / UNDER THE HOOD</div><h2>Behind the code</h2><p>CPU cycles, pixel pipelines, memory buses, hardware quirks, and the pursuit of faithful emulation.</p><div class="terminal"><div><span class="terminal-green">●</span> R2 / ENGINEERING LOG</div><code>&gt; cpu.tick()<br/>&gt; ppu.step()<br/>&gt; preserve_history(true)<span class="cursor">_</span></code></div></div>
+  </section>
+  <section class="shell closing"><div class="kicker">KEEP THE CLASSICS ALIVE</div><h2>Old games. <span>New generations.</span></h2><a class="button-primary" href="#projects">Meet the emulators ↗</a></section>
+</MainLayout>
