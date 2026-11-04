@@ -2,7 +2,7 @@ export const emulators = [
   {
     slug: 'r2nes', name: 'R2NES', system: 'Nintendo Entertainment System',
     short: 'A modern NES emulator focused on accuracy and playability.',
-    accent: 'cyan', glyph: 'N', stage: 'Playable', image: '/images/r2nes-console.webp',
+    accent: 'cyan', glyph: 'N', stage: 'Playable', image: '/images/r2nes-console-2.webp',
     features: ['Cycle-based emulation', 'Save states', 'Rewind', 'Controller support'],
     github: 'https://github.com/jpaulobf/R2NESV2'
   },
