@@ -9,7 +9,7 @@ export const emulators = [
   {
     slug: 'r2boy', name: 'R2BOY', system: 'Game Boy / Game Boy Color',
     short: 'Pixel-by-pixel graphics and timing-focused handheld emulation.',
-    accent: 'violet', glyph: 'B', stage: 'In development', image: '/images/r2boy-console.webp',
+    accent: 'violet', glyph: 'B', stage: 'In development', image: '/images/r2boy-console-2.webp',
     features: ['Pixel FIFO rendering', 'Cycle-based timing', 'Game Boy / Color'],
     github: 'https://github.com/jpaulobf/R2BOY'
   },
