@@ -16,7 +16,7 @@ export const emulators = [
   {
     slug: 'r2sega8', name: 'R2SEGA8', system: 'Sega 8-bit family',
     short: 'A unified foundation for exploring the classic Sega 8-bit systems.',
-    accent: 'orange', glyph: 'S', stage: 'In development', image: '/images/r2sega8-console.webp',
+    accent: 'orange', glyph: 'S', stage: 'In development', image: '/images/r2sega8-console-2.webp',
     features: ['Shared system architecture', 'SG-1000 focus', 'More systems planned'],
     github: 'https://github.com/jpaulobf/R2SEGA8'
   }
